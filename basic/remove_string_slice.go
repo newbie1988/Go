@@ -2,6 +2,7 @@ package main
 import "fmt"
 
 func removeString(strs []string, start int, end int) []string{
+/*
 	length := len(strs);
 	if start < 0 || end > length {
 		fmt.Println("invalid paramters!");
@@ -15,6 +16,9 @@ func removeString(strs []string, start int, end int) []string{
 	}
 	
 	strs = strs[0:length - end + start];
+	return strs;
+*/
+	strs = append(strs[:start], strs[end:]...);
 	return strs;
 }
 
