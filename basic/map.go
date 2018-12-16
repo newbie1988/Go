@@ -14,5 +14,10 @@ func main() {
 	print(weathers);
 	fmt.Println("##################");
 	delete(weathers, "HangZhou");
+	if weather, isExist := weathers["HangZhou"]; isExist {
+		fmt.Println("Hangzhou weather is", weather);
+	} else {
+		fmt.Println("Can't find HangZhou Weather");
+	}
 	print(weathers);
 }
